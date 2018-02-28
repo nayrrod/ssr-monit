@@ -30,7 +30,10 @@ async function retrieveMetrics(url, page) {
 }
 
 async function analyzePage (url) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless : true,
+    args: [ '--no-sandbox' ]
+  });
   const page = await browser.newPage();
   let metrics = await retrieveMetrics(url, page)
   await browser.close();
