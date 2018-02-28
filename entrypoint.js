@@ -24,6 +24,9 @@ var remoteMetrics = {
   }),
   heapTotal : Probe.metric({
     name : 'Heap Total Size'
+  }),
+  res : Probe.metric({
+    name : 'Resources'
   })
 }
 
@@ -35,6 +38,7 @@ let update = async() => {
   remoteMetrics.layoutDuration.set(Math.floor(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'LayoutDuration')))
   remoteMetrics.heapUser.set(Math.floor(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'JSHeapUsedSize')))
   remoteMetrics.heapTotal.set(Math.floor(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'JSHeapTotalSize')))
+  remoteMetrics.res.set(Math.floor(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'Resources')))
 }
 
 setInterval(function() {
