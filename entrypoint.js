@@ -23,7 +23,7 @@ var remoteMetrics = {
     name : 'Heap Used Size'
   }),
   heapTotal : Probe.metric({
-    name : 'Heap Used Size'
+    name : 'Heap Total Size'
   })
 }
 
