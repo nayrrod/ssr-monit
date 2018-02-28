@@ -30,11 +30,11 @@ var remoteMetrics = {
 let update = async() => {
   var metrics = await render('https://www.facebook.com/');
 
-  remoteMetrics.scripting.set(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'ScriptDuration'))
-  remoteMetrics.styleDuration.set(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'RecalcStyleDuration'))
-  remoteMetrics.layoutDuration.set(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'LayoutDuration'))
-  remoteMetrics.heapUser.set(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'JSHeapUsedSize'))
-  remoteMetrics.heapTotal.set(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'JSHeapTotalSize'))
+  remoteMetrics.scripting.set(Math.floor(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'ScriptDuration')))
+  remoteMetrics.styleDuration.set(Math.floor(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'RecalcStyleDuration')))
+  remoteMetrics.layoutDuration.set(Math.floor(getTimeFromPerformanceMetrics(metrics.performanceMetrics, 'LayoutDuration')))
+  remoteMetrics.heapUser.set(Math.floor(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'JSHeapUsedSize')))
+  remoteMetrics.heapTotal.set(Math.floor(getValueFromPerformanceMetrics(metrics.performanceMetrics, 'JSHeapTotalSize')))
 }
 
 setInterval(function() {
