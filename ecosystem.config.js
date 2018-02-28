@@ -13,7 +13,7 @@ module.exports = {
       user : 'root',
       host : '163.172.141.76',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'git@github.com:Unitech/ssr-monit.git',
       path : '/var/www/ssr-testing',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     }
