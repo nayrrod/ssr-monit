@@ -1,16 +1,16 @@
 [{
-  'path' : 'ScriptDuration',
-  'name' : 'Scripting',
-  'type' : 'ssr/scripting',
-  'unit' : 'ms'
+  "path" : "ScriptDuration",
+  "name" : "Scripting",
+  "type" : "ssr/scripting",
+  "unit" : "ms"
 }, {
-  'path' : 'RecalcStyleDuration',
-  'name' : 'RecalcStyleDuration',
-  'type' : 'ssr/style',
-  'unit' : 'ms'
+  "path" : "RecalcStyleDuration",
+  "name" : "RecalcStyleDuration",
+  "type" : "ssr/style",
+  "unit" : "ms"
 }, {
-  'path' : 'LayoutDuration',
-  'name' : 'LayoutDuration',
-  'type' : 'ssr/layout',
-  'unit' : 'ms'
+  "path" : "LayoutDuration",
+  "name" : "LayoutDuration",
+  "type" : "ssr/layout",
+  "unit" : "ms"
 }]
