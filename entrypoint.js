@@ -11,13 +11,16 @@ const {
 
 var remoteMetrics = {
   scripting : Probe.metric({
-    name : 'Script Duration'
+    name : 'Script Duration',
+    unit: 'ms'
   }),
   styleDuration : Probe.metric({
-    name : 'Style Duration'
+    name : 'Style Duration',
+    unit: 'ms'
   }),
   layoutDuration : Probe.metric({
-    name : 'Layout Duration'
+    name : 'Layout Duration',
+    unit: 'ms'
   }),
   heapUser : Probe.metric({
     name : 'Heap Used Size'
@@ -43,6 +46,6 @@ let update = async() => {
 
 setInterval(function() {
   update()
-}, 1000 * 15)
+}, 5 * 1000)
 
 update()
